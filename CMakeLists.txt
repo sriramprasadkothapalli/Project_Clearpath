@@ -5,27 +5,47 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
-# find dependencies
-find_package(ament_cmake REQUIRED)
-find_package(rclcpp REQUIRED)
-find_package(geometry_msgs REQUIRED)
-find_package(sensor_msgs REQUIRED)
+# Package dependencies
+set(PACKAGE_DEPENDENCIES
+  ament_cmake
+  std_msgs
+  sensor_msgs
+  geometry_msgs
+  gazebo_msgs
+  nav_msgs
+  tf2_ros
+  image_transport
+  cv_bridge
+  rclcpp
+  rclpy
+  tf2
+  OpenCV
+  rosidl_default_generators
+  rosbag2_cpp
+)
 
-find_package(rosidl_default_generators REQUIRED)
-find_package(std_msgs REQUIRED)
-find_package(rosbag2_cpp REQUIRED)
-# uncomment the following section in order to fill in
-# further dependencies manually.
-# find_package(<dependency> REQUIRED)
-# add_executable(roomba_algo src/cleaner2.cpp)
-# ament_target_dependencies(roomba_algo rclcpp std_msgs sensor_msgs geometry_msgs)
-# add_executable(simple_bag_recorder src/simple_bag_recorder.cpp)
-# ament_target_dependencies(simple_bag_recorder rclcpp rosbag2_cpp std_msgs geometry_msgs)
+# Find dependencies
+foreach(dependency IN ITEMS ${PACKAGE_DEPENDENCIES})
+  find_package(${dependency} REQUIRED)
+endforeach()
 
-# install(TARGETS
-#   roomba_algo
-#   simple_bag_recorder
-#   DESTINATION lib/${PROJECT_NAME})
+
+
+# Add executables
+add_executable(collector_node src/main.cpp src/debris_detection.cpp)
+ament_target_dependencies(collector_node ${PACKAGE_DEPENDENCIES})
+
+# Include directories for collector_node
+target_include_directories(collector_node PUBLIC
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+  $<INSTALL_INTERFACE:include>
+)
+
+# Install executables
+install(TARGETS
+  collector_node
+  DESTINATION lib/${PROJECT_NAME}
+)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
