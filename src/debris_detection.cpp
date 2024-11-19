@@ -57,13 +57,17 @@ void DebrisDetector::process_image_callback(const ImageMsg::ConstSharedPtr& msg)
         cv::Mat hsv_image, binary_image;
         cv::Mat image = cv_bridge::toCvShare(msg, msg->encoding)->image;
 
-        // Display the raw image (Camera POV)
-        cv::imshow("Camera POV - Raw Image", image);
+        // Convert BGR image to RGB for correct visualization
+        cv::Mat rgb_image;
+        cv::cvtColor(image, rgb_image, cv::COLOR_BGR2RGB);
+
+        // Display the raw image (Camera POV) in RGB
+        cv::imshow("Camera POV - Raw Image (RGB)", rgb_image);
 
         // HSV ranges for debris colors (blue, green, red)
         cv::Mat blue_mask, red_mask, green_mask, debris_mask;
 
-        cv::cvtColor(image, hsv_image, cv::COLOR_BGR2HSV);
+        cv::cvtColor(rgb_image, hsv_image, cv::COLOR_RGB2HSV);
 
         // Define thresholds
         cv::inRange(hsv_image, cv::Scalar(100, 80, 80), cv::Scalar(132, 255, 255), blue_mask);  // Blue
@@ -100,17 +104,17 @@ void DebrisDetector::process_image_callback(const ImageMsg::ConstSharedPtr& msg)
                 stop_ = area > 40000;
             }
 
-            // Draw bounding box around debris
-            cv::rectangle(image, bounding_box, cv::Scalar(0, 255, 0), 2);
+            // Draw bounding box around debris on the RGB image
+            cv::rectangle(rgb_image, bounding_box, cv::Scalar(0, 255, 0), 2);
         }
 
         // Display the processed image
         cv::imshow("Debris Detection - Processed Image", debris_mask);
 
-        // Add bounding box visualization to the raw image
-        cv::imshow("Camera POV - Processed", image);
+        // Add bounding box visualization to the raw image in RGB
+        cv::imshow("Camera POV - Processed (RGB)", rgb_image);
 
-        // Publish debug image
+        // Publish debug image in RGB
         auto debug_msg = cv_bridge::CvImage(std_msgs::msg::Header(), "rgb8", debris_mask).toImageMsg();
         debug_image_publisher_->publish(*debug_msg);
 
