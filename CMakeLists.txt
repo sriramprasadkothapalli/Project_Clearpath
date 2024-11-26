@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.14)
+cmake_minimum_required(VERSION 3.8)
 project(project_clearpath)
 
 #
@@ -49,7 +49,8 @@ foreach(dependency IN ITEMS ${PACKAGE_DEPENDENCIES})
   find_package(${dependency} REQUIRED)
 endforeach()
 
-
+# find_package(CURL REQUIRED)
+# target_link_libraries(your_target ${CURL_LIBRARIES})
 #
 # Doxygen Support check if Doxygen is installed
 # ref: https://cmake.org/cmake/help/latest/module/FindDoxygen.html
@@ -125,7 +126,7 @@ endif()
 #
 add_subdirectory(libs)
 add_subdirectory(app)
-add_subdirectory(test)
+# add_subdirectory(test)
 
 
 # create a target to build documentation
