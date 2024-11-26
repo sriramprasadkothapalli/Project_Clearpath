@@ -22,7 +22,7 @@ def generate_launch_description():
     yaw = LaunchConfiguration('yaw', default='-3.14159')
 
     collection_world = os.path.join(get_package_share_directory('project_clearpath'),
-                                              'worlds', 'empty_world.world')
+                                              'worlds', 'disaster_world.world')
 
     gzserver_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
@@ -53,6 +53,7 @@ def generate_launch_description():
             'yaw':    yaw
         }.items()
     )
+
     trash_ld = IncludeLaunchDescription(PythonLaunchDescriptionSource([
               trash_launch_dir,
               '/spawn_trash.launch.py']))
