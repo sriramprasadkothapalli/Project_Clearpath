@@ -4,9 +4,11 @@
  */
 
 #include "debris_detection.hpp"
+#include "debris_remover.hpp"
 #include <functional>
 #include <opencv2/imgproc/types_c.h>
 #include <rclcpp/logging.hpp>
+#include <rclcpp/utilities.hpp>
 #include "tf2/LinearMath/Quaternion.h"
 #include "tf2/LinearMath/Matrix3x3.h"
 // #include <opencv2/imgproc.hpp>
@@ -51,13 +53,13 @@ DebrisDetector::DebrisDetector() : Node("debris_detector") {
 void DebrisDetector::navigate_to_debris() {
     TwistMsg velocity_command;
     if (rotate_right_) {
-        velocity_command.angular.z = -0.05;
+        velocity_command.angular.z = -0.1;
         velocity_command.linear.x = 0.0;
     } else if (rotate_left_) {
-        velocity_command.angular.z = 0.05;
+        velocity_command.angular.z = 0.1;
         velocity_command.linear.x = 0.0;
     } else if (move_forward_) {
-        velocity_command.linear.x = 0.1;
+        velocity_command.linear.x = 0.2;
         velocity_command.angular.z = 0.0;
     } else if (stop_) {
         velocity_command.linear.x = 0.0;
@@ -135,8 +137,8 @@ void DebrisDetector::process_image_callback(const ImageMsg::ConstSharedPtr& msg)
                 } else {
                     rotate_left_ = false;
                     rotate_right_ = false;
-                    move_forward_ = area <= 40000;
-                    stop_ = area > 40000;
+                    move_forward_ = area <= 10000;
+                    stop_ = area > 10000;
                 }
 
             // Draw bounding box around debris on the RGB image
@@ -181,6 +183,28 @@ void DebrisDetector::process_odometry_callback(const OdomMsg::SharedPtr odom_msg
     current_orientation_ = yaw;
 }
 
+bool DebrisDetector::move2next_debris(){
+    double start_orientation = current_orientation_;
+    while (rclcpp::ok() && std::abs(current_orientation_ - start_orientation) < 2 * M_PI) {
+        TwistMsg scan_cmd;
+        scan_cmd.angular.z = 0.2;  // Adjust rotation speed as needed
+        velocity_publisher_->publish(scan_cmd);
+        rclcpp::spin_some(shared_from_this());
+
+
+    if (debris_detected_) {
+            RCLCPP_INFO(this->get_logger(), "New object detected. Resuming navigation.");
+            return true;
+            break;
+        }
+    }
+
+    if (!debris_detected_) {
+        RCLCPP_INFO(this->get_logger(), "No more objects detected. Ending detection.");
+        return false;
+    }
+};
+
 /**
  * @brief Main function for detecting and handling debris.
  *
@@ -190,12 +214,16 @@ void DebrisDetector::process_odometry_callback(const OdomMsg::SharedPtr odom_msg
  */
 bool DebrisDetector::detect_and_handle_debris() {
     rclcpp::spin_some(shared_from_this());
+    // auto rclcpp::spin_some(shared_from_this());
     initial_orientation_ = current_orientation_;
 
     while (rclcpp::ok()) {
+        
         rclcpp::spin_some(shared_from_this());
         navigate_to_debris();
         if (stop_) {
+
+            // return true;
             RCLCPP_INFO(this->get_logger(), "Continuing Detection");
 
             stop_ = false;
@@ -203,24 +231,26 @@ bool DebrisDetector::detect_and_handle_debris() {
             rotate_left_ = false;
             rotate_right_ = false;
 
-            double start_orientation = current_orientation_;
-            while (rclcpp::ok() && std::abs(current_orientation_ - start_orientation) < 2 * M_PI) {
-                TwistMsg scan_cmd;
-                scan_cmd.angular.z = 0.5;  // Adjust rotation speed as needed
-                velocity_publisher_->publish(scan_cmd);
-                rclcpp::spin_some(shared_from_this());
+            return true;
+
+            // double start_orientation = current_orientation_;
+            // while (rclcpp::ok() && std::abs(current_orientation_ - start_orientation) < 2 * M_PI) {
+            //     TwistMsg scan_cmd;
+            //     scan_cmd.angular.z = 0.5;  // Adjust rotation speed as needed
+            //     velocity_publisher_->publish(scan_cmd);
+            //     rclcpp::spin_some(shared_from_this());
 
 
-            if (debris_detected_) {
-                    RCLCPP_INFO(this->get_logger(), "New object detected. Resuming navigation.");
-                    break;
-                }
-            }
+            // if (debris_detected_) {
+            //         RCLCPP_INFO(this->get_logger(), "New object detected. Resuming navigation.");
+            //         break;
+            //     }
+            // }
 
-            if (!debris_detected_) {
-                RCLCPP_INFO(this->get_logger(), "No more objects detected. Ending detection.");
-                return true;
-            }
+            // if (!debris_detected_) {
+            //     RCLCPP_INFO(this->get_logger(), "No more objects detected. Ending detection.");
+            //     return true;
+            // }
         }
     }
     return false;

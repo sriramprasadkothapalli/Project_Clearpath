@@ -31,6 +31,7 @@ set(PACKAGE_DEPENDENCIES
   std_msgs
   sensor_msgs
   geometry_msgs
+  gazebo_ros
   gazebo_msgs
   nav_msgs
   tf2_ros

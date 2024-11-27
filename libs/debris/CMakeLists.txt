@@ -2,6 +2,7 @@
 add_library(myDebris
   # list of cpp source files:
   debris_detection.cpp
+  debris_remover.cpp
 )
 
 # Indicate what directories should be added to the include file search
@@ -17,6 +18,8 @@ ament_target_dependencies(myDebris
   geometry_msgs
   nav_msgs
   sensor_msgs
+  gazebo_ros
+  gazebo_msgs
   image_transport
   cv_bridge
   std_msgs

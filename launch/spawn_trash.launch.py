@@ -7,8 +7,8 @@ from ament_index_python.packages import get_package_share_directory
 
 def generate_block(i, model_name):
     model_path = os.path.join(get_package_share_directory('project_clearpath'), 'models')
-    x_pos = random.uniform(-3.0, 3.0)
-    y_pos = random.uniform(-3.0, 3.0)
+    x_pos = random.uniform(-2.0, 2.0)
+    y_pos = random.uniform(0.0, 2.0)
     # x_pos = 1.0
     # y_pos = 1.0
 
@@ -25,7 +25,7 @@ def generate_block(i, model_name):
     )
 
 def generate_launch_description():
-    objects_to_spawn = ['beer', 'trash_block']  # Add your model names here
+    objects_to_spawn = ['trash_block', 'beer'] 
     blocks = []
     
     for i, model_name in enumerate(objects_to_spawn):
