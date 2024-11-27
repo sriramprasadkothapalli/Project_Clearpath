@@ -76,6 +76,8 @@ class DebrisDetector : public rclcpp::Node {
    */
   bool detect_and_handle_debris();
 
+  bool move2next_debris();
+
   // Getter functions to access private members for testing
   const cv::Mat& get_current_image() { return current_image_; }
   bool is_debris_detected() { return debris_detected_; }
