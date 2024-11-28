@@ -40,7 +40,7 @@ class DebrisRemover : public rclcpp::Node {
     public:
         DebrisRemover();
 
-        bool remove_debris();
+        bool remove_debris(std::string);
 
         int get_recent_debris();
 

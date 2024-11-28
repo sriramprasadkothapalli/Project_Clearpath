@@ -1,0 +1,19 @@
+The C compiler identification could not be found in "/home/tathyab/clearpath_ws/project_clearpath/build/project_clearpath/CMakeFiles/3.22.1/CompilerIdC/a-CMakeCCompilerId.gcno"
+
+The CXX compiler identification could not be found in "/home/tathyab/clearpath_ws/project_clearpath/build/project_clearpath/CMakeFiles/3.22.1/CompilerIdCXX/CMakeCXXCompilerId.gcno"
+
+Performing C++ SOURCE FILE Test HAVE_fprofile_abs_path failed with the following output:
+Change Dir: /home/tathyab/clearpath_ws/project_clearpath/build/project_clearpath/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_450cc/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_450cc.dir/build.make CMakeFiles/cmTC_450cc.dir/build
+gmake[1]: Entering directory '/home/tathyab/clearpath_ws/project_clearpath/build/project_clearpath/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_450cc.dir/src.cxx.o
+/usr/bin/c++ -DHAVE_fprofile_abs_path  --coverage     -fprofile-abs-path -std=gnu++14 -o CMakeFiles/cmTC_450cc.dir/src.cxx.o -c /home/tathyab/clearpath_ws/project_clearpath/build/project_clearpath/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command line option '-fprofile-abs-path'; did you mean '-fprofile-generate'?
+gmake[1]: *** [CMakeFiles/cmTC_450cc.dir/build.make:78: CMakeFiles/cmTC_450cc.dir/src.cxx.o] Error 1
+gmake[1]: Leaving directory '/home/tathyab/clearpath_ws/project_clearpath/build/project_clearpath/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_450cc/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
