@@ -1,0 +1,535 @@
+[0.000000] (-) TimerEvent: {}
+[0.000182] (project_clearpath) JobQueued: {'identifier': 'project_clearpath', 'dependencies': OrderedDict()}
+[0.000216] (project_clearpath) JobStarted: {'identifier': 'project_clearpath'}
+[0.007594] (project_clearpath) JobProgress: {'identifier': 'project_clearpath', 'progress': 'cmake'}
+[0.007639] (project_clearpath) Command: {'cmd': ['/usr/bin/cmake', '/home/tathyab/clearpath_ws/project_clearpath', '-DCMAKE_CXX_FLAGS=--coverage', '-DCMAKE_C_FLAGS=--coverage', '-DCMAKE_BUILD_TYPE=Debug', '-DCMAKE_INSTALL_PREFIX=/home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath'], 'cwd': '/home/tathyab/clearpath_ws/project_clearpath/build/project_clearpath', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'tathyab'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu'), ('HOME', '/home/tathyab'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/tathyab/clearpath_ws'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1844'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/tathyab/clearpath_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'tathyab'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'tathyab'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/tathyab/anaconda3/condabin:/home/tathyab/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/tathyab:@/tmp/.ICE-unix/1814,unix/tathyab:/tmp/.ICE-unix/1814'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/afa5b81e_fc00_46a0_a312_c0c1c90966a6'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.S87RX2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.735'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/tathyab/clearpath_ws/install/project_clearpath:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/tathyab/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/tathyab/clearpath_ws/project_clearpath/build/project_clearpath'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/tathyab/anaconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/tathyab/clearpath_ws/install/project_clearpath:/opt/ros/humble')]), 'shell': False}
+[0.099410] (-) TimerEvent: {}
+[0.106151] (project_clearpath) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.165897] (project_clearpath) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 7.5.0\n'}
+[0.172671] (project_clearpath) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.199534] (-) TimerEvent: {}
+[0.243089] (project_clearpath) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.251988] (project_clearpath) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.252287] (project_clearpath) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.252715] (project_clearpath) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.256013] (project_clearpath) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.299658] (-) TimerEvent: {}
+[0.345325] (project_clearpath) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.354862] (project_clearpath) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.355200] (project_clearpath) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.355708] (project_clearpath) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.399746] (-) TimerEvent: {}
+[0.500037] (-) TimerEvent: {}
+[0.600313] (-) TimerEvent: {}
+[0.700636] (-) TimerEvent: {}
+[0.801227] (-) TimerEvent: {}
+[0.901725] (-) TimerEvent: {}
+[1.002394] (-) TimerEvent: {}
+[1.102998] (-) TimerEvent: {}
+[1.203488] (-) TimerEvent: {}
+[1.303751] (-) TimerEvent: {}
+[1.404004] (-) TimerEvent: {}
+[1.504228] (-) TimerEvent: {}
+[1.580301] (project_clearpath) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter \n'}
+[1.581619] (project_clearpath) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[1.604352] (-) TimerEvent: {}
+[1.646196] (project_clearpath) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[1.646437] (project_clearpath) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.704439] (-) TimerEvent: {}
+[1.711952] (project_clearpath) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[1.713122] (project_clearpath) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.722425] (project_clearpath) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[1.804559] (-) TimerEvent: {}
+[1.855653] (project_clearpath) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[1.904676] (-) TimerEvent: {}
+[1.936921] (project_clearpath) StdoutLine: {'line': b'-- Found std_msgs: 4.2.4 (/opt/ros/humble/share/std_msgs/cmake)\n'}
+[1.970766] (project_clearpath) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[1.976050] (project_clearpath) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[1.984203] (project_clearpath) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[1.995737] (project_clearpath) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.004789] (-) TimerEvent: {}
+[2.011022] (project_clearpath) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.036299] (project_clearpath) StdoutLine: {'line': b'-- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[2.066657] (project_clearpath) StdoutLine: {'line': b'-- Found gazebo_ros: 3.7.0 (/opt/ros/humble/share/gazebo_ros/cmake)\n'}
+[2.104918] (-) TimerEvent: {}
+[2.106895] (project_clearpath) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[2.109401] (project_clearpath) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[2.191585] (project_clearpath) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[2.205015] (-) TimerEvent: {}
+[2.218271] (project_clearpath) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[2.266461] (project_clearpath) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[2.305110] (-) TimerEvent: {}
+[2.318120] (project_clearpath) StdoutLine: {'line': b'-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.2") \n'}
+[2.319135] (project_clearpath) StdoutLine: {'line': b"-- Checking for module 'bullet>=2.82'\n"}
+[2.330542] (project_clearpath) StdoutLine: {'line': b'--   Found bullet, version 3.05\n'}
+[2.405236] (-) TimerEvent: {}
+[2.437424] (project_clearpath) StdoutLine: {'line': b'-- Found fcl: /usr/include (found suitable version "0.7.0", minimum required is "0.5.0") \n'}
+[2.482229] (project_clearpath) StdoutLine: {'line': b'-- Found assimp: /usr/include (found version "5.2.0") \n'}
+[2.500538] (project_clearpath) StdoutLine: {'line': b'-- Found DART: /usr/include (Required is at least version "6.6") found components: dart \n'}
+[2.505323] (-) TimerEvent: {}
+[2.526124] (project_clearpath) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found suitable version "1.74.0", minimum required is "1.40.0") found components: thread system filesystem program_options regex iostreams date_time \n'}
+[2.538839] (project_clearpath) StdoutLine: {'line': b'-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found version "3.12.4") \n'}
+[2.543648] (project_clearpath) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[2.549121] (project_clearpath) StdoutLine: {'line': b'-- Searching for dependencies of ignition-math6\n'}
+[2.550249] (project_clearpath) StdoutLine: {'line': b'-- Looking for OGRE...\n'}
+[2.550608] (project_clearpath) StdoutLine: {'line': b'-- OGRE_PREFIX_WATCH changed.\n'}
+[2.554911] (project_clearpath) StdoutLine: {'line': b"-- Checking for module 'OGRE'\n"}
+[2.565510] (project_clearpath) StdoutLine: {'line': b'--   Found OGRE, version 1.9.0\n'}
+[2.594240] (project_clearpath) StdoutLine: {'line': b'-- Found Ogre Ghadamon (1.9.0)\n'}
+[2.600359] (project_clearpath) StdoutLine: {'line': b'-- Found OGRE: optimized;/usr/lib/x86_64-linux-gnu/libOgreMain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreMain.so\n'}
+[2.605426] (-) TimerEvent: {}
+[2.608771] (project_clearpath) StdoutLine: {'line': b'-- Looking for OGRE_Paging...\n'}
+[2.613356] (project_clearpath) StdoutLine: {'line': b'-- Found OGRE_Paging: optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so\n'}
+[2.613443] (project_clearpath) StdoutLine: {'line': b'-- Looking for OGRE_Terrain...\n'}
+[2.617651] (project_clearpath) StdoutLine: {'line': b'-- Found OGRE_Terrain: optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so\n'}
+[2.617744] (project_clearpath) StdoutLine: {'line': b'-- Looking for OGRE_Property...\n'}
+[2.622096] (project_clearpath) StdoutLine: {'line': b'-- Found OGRE_Property: optimized;/usr/lib/x86_64-linux-gnu/libOgreProperty.so;debug;/usr/lib/x86_64-linux-gnu/libOgreProperty.so\n'}
+[2.622204] (project_clearpath) StdoutLine: {'line': b'-- Looking for OGRE_RTShaderSystem...\n'}
+[2.626636] (project_clearpath) StdoutLine: {'line': b'-- Found OGRE_RTShaderSystem: optimized;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so;debug;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so\n'}
+[2.626743] (project_clearpath) StdoutLine: {'line': b'-- Looking for OGRE_Volume...\n'}
+[2.631039] (project_clearpath) StdoutLine: {'line': b'-- Found OGRE_Volume: optimized;/usr/lib/x86_64-linux-gnu/libOgreVolume.so;debug;/usr/lib/x86_64-linux-gnu/libOgreVolume.so\n'}
+[2.631125] (project_clearpath) StdoutLine: {'line': b'-- Looking for OGRE_Overlay...\n'}
+[2.635327] (project_clearpath) StdoutLine: {'line': b'-- Found OGRE_Overlay: optimized;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so;debug;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so\n'}
+[2.705548] (-) TimerEvent: {}
+[2.735773] (project_clearpath) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[2.737997] (project_clearpath) StdoutLine: {'line': b'-- Looking for ignition-transport8 -- found version 8.2.1\n'}
+[2.738407] (project_clearpath) StdoutLine: {'line': b'-- Searching for dependencies of ignition-transport8\n'}
+[2.754657] (project_clearpath) StdoutLine: {'line': b'-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found suitable version "3.12.4", minimum required is "3") \n'}
+[2.765326] (project_clearpath) StdoutLine: {'line': b'-- Config-file not installed for ZeroMQ -- checking for pkg-config\n'}
+[2.769275] (project_clearpath) StdoutLine: {'line': b"-- Checking for module 'libzmq >= 4'\n"}
+[2.780855] (project_clearpath) StdoutLine: {'line': b'--   Found libzmq , version 4.3.4\n'}
+[2.805660] (-) TimerEvent: {}
+[2.812316] (project_clearpath) StdoutLine: {'line': b'-- Found ZeroMQ: TRUE (Required is at least version "4") \n'}
+[2.817202] (project_clearpath) StdoutLine: {'line': b"-- Checking for module 'uuid'\n"}
+[2.828454] (project_clearpath) StdoutLine: {'line': b'--   Found uuid, version 2.37.2\n'}
+[2.857002] (project_clearpath) StdoutLine: {'line': b'-- Found UUID: TRUE  \n'}
+[2.859311] (project_clearpath) StdoutLine: {'line': b'-- Looking for ignition-msgs5 -- found version 5.8.1\n'}
+[2.859714] (project_clearpath) StdoutLine: {'line': b'-- Searching for dependencies of ignition-msgs5\n'}
+[2.878476] (project_clearpath) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[2.883258] (project_clearpath) StdoutLine: {'line': b"-- Checking for module 'tinyxml2'\n"}
+[2.893733] (project_clearpath) StdoutLine: {'line': b'--   Found tinyxml2, version 9.0.0\n'}
+[2.905742] (-) TimerEvent: {}
+[2.922035] (project_clearpath) StdoutLine: {'line': b'-- Looking for ignition-msgs5 -- found version 5.8.1\n'}
+[2.924239] (project_clearpath) StdoutLine: {'line': b'-- Looking for ignition-common3 -- found version 3.14.0\n'}
+[2.924656] (project_clearpath) StdoutLine: {'line': b'-- Searching for dependencies of ignition-common3\n'}
+[2.924900] (project_clearpath) StdoutLine: {'line': b'-- Looking for dlfcn.h - found\n'}
+[2.925638] (project_clearpath) StdoutLine: {'line': b'-- Looking for libdl - found\n'}
+[2.926809] (project_clearpath) StdoutLine: {'line': b'-- Found DL: TRUE  \n'}
+[2.936773] (project_clearpath) StdoutLine: {'line': b'-- Found tinyobjloader: /usr/lib/x86_64-linux-gnu/cmake/tinyobjloader/tinyobjloader-config.cmake (found version "2.0.0") \n'}
+[2.937271] (project_clearpath) StdoutLine: {'line': b'-- Searching for <ignition-common3> component [graphics]\n'}
+[2.939382] (project_clearpath) StdoutLine: {'line': b'-- Looking for ignition-common3-graphics -- found version 3.14.0\n'}
+[2.939833] (project_clearpath) StdoutLine: {'line': b'-- Searching for dependencies of ignition-common3-graphics\n'}
+[2.940142] (project_clearpath) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[2.942717] (project_clearpath) StdoutLine: {'line': b'-- Looking for ignition-fuel_tools4 -- found version 4.4.0\n'}
+[2.943106] (project_clearpath) StdoutLine: {'line': b'-- Searching for dependencies of ignition-fuel_tools4\n'}
+[3.005870] (-) TimerEvent: {}
+[3.009560] (project_clearpath) StdoutLine: {'line': b'-- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "7.81.0")  \n'}
+[3.017310] (project_clearpath) StdoutLine: {'line': b"-- Checking for module 'jsoncpp'\n"}
+[3.028927] (project_clearpath) StdoutLine: {'line': b'--   Found jsoncpp, version 1.9.5\n'}
+[3.057956] (project_clearpath) StdoutLine: {'line': b'-- Found JSONCPP: TRUE  \n'}
+[3.062674] (project_clearpath) StdoutLine: {'line': b"-- Checking for module 'libzip'\n"}
+[3.073609] (project_clearpath) StdoutLine: {'line': b'--   Found libzip, version 1.7.3\n'}
+[3.101897] (project_clearpath) StdoutLine: {'line': b'-- Found ZIP: TRUE  \n'}
+[3.102322] (project_clearpath) StdoutLine: {'line': b'-- Looking for ignition-common3 -- found version 3.14.0\n'}
+[3.102670] (project_clearpath) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[3.103038] (project_clearpath) StdoutLine: {'line': b'-- Looking for ignition-msgs5 -- found version 5.8.1\n'}
+[3.105966] (-) TimerEvent: {}
+[3.106195] (project_clearpath) StdoutLine: {'line': b'-- Gazebo version: 11.10\n'}
+[3.106496] (project_clearpath) StdoutLine: {'line': b"-- Checking for module 'tbb'\n"}
+[3.117388] (project_clearpath) StdoutLine: {'line': b'--   Found tbb, version 2021.5.0\n'}
+[3.147998] (project_clearpath) StdoutLine: {'line': b'-- Found gazebo_msgs: 3.7.0 (/opt/ros/humble/share/gazebo_msgs/cmake)\n'}
+[3.185084] (project_clearpath) StdoutLine: {'line': b'-- Found nav_msgs: 4.2.4 (/opt/ros/humble/share/nav_msgs/cmake)\n'}
+[3.201291] (project_clearpath) StdoutLine: {'line': b'-- Found tf2_ros: 0.25.8 (/opt/ros/humble/share/tf2_ros/cmake)\n'}
+[3.206036] (-) TimerEvent: {}
+[3.296008] (project_clearpath) StdoutLine: {'line': b'-- Found image_transport: 3.1.9 (/opt/ros/humble/share/image_transport/cmake)\n'}
+[3.306105] (-) TimerEvent: {}
+[3.315557] (project_clearpath) StdoutLine: {'line': b'-- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)\n'}
+[3.322952] (project_clearpath) StdoutLine: {'line': b'-- Found rclpy: 3.3.14 (/opt/ros/humble/share/rclpy/cmake)\n'}
+[3.324857] (project_clearpath) StdoutLine: {'line': b'-- Found OpenCV: /usr/local (found version "4.7.0") \n'}
+[3.326566] (project_clearpath) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[3.335675] (project_clearpath) StdoutLine: {'line': b'-- Found rosbag2_cpp: 0.15.12 (/opt/ros/humble/share/rosbag2_cpp/cmake)\n'}
+[3.367750] (project_clearpath) StdoutLine: {'line': b'-- Found Doxygen: /usr/bin/doxygen (found version "1.9.1") found components: doxygen dot \n'}
+[3.403934] (project_clearpath) StderrLine: {'line': b'\x1b[0mEnabling coverage\x1b[0m\n'}
+[3.406232] (-) TimerEvent: {}
+[3.408859] (project_clearpath) StdoutLine: {'line': b'-- Performing Test HAVE_fprofile_abs_path\n'}
+[3.434153] (project_clearpath) StdoutLine: {'line': b'-- Performing Test HAVE_fprofile_abs_path - Failed\n'}
+[3.434515] (project_clearpath) StdoutLine: {'line': b'-- Appending code coverage compiler flags: -g --coverage\n'}
+[3.452741] (project_clearpath) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[3.506366] (-) TimerEvent: {}
+[3.606615] (-) TimerEvent: {}
+[3.703313] (project_clearpath) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[3.703542] (project_clearpath) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[3.703617] (project_clearpath) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[3.706714] (-) TimerEvent: {}
+[3.726970] (project_clearpath) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[3.770010] (project_clearpath) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[3.792936] (project_clearpath) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[3.806806] (-) TimerEvent: {}
+[3.907060] (-) TimerEvent: {}
+[3.978424] (project_clearpath) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[3.978555] (project_clearpath) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[4.000725] (project_clearpath) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[4.001790] (project_clearpath) StdoutLine: {'line': b'-- CMAKE_BUILD_TYPE = Debug\n'}
+[4.001876] (project_clearpath) StdoutLine: {'line': b'-- WANT_COVERAGE    = ON\n'}
+[4.002059] (project_clearpath) StdoutLine: {'line': b'-- Configuring done\n'}
+[4.007123] (-) TimerEvent: {}
+[4.071436] (project_clearpath) StdoutLine: {'line': b'-- Generating done\n'}
+[4.076073] (project_clearpath) StdoutLine: {'line': b'-- Build files have been written to: /home/tathyab/clearpath_ws/project_clearpath/build/project_clearpath\n'}
+[4.090425] (project_clearpath) CommandEnded: {'returncode': 0}
+[4.091088] (project_clearpath) JobProgress: {'identifier': 'project_clearpath', 'progress': 'build'}
+[4.092243] (project_clearpath) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/tathyab/clearpath_ws/project_clearpath/build/project_clearpath', '--', '-j12', '-l12'], 'cwd': '/home/tathyab/clearpath_ws/project_clearpath/build/project_clearpath', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'tathyab'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu'), ('HOME', '/home/tathyab'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/tathyab/clearpath_ws'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1844'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/tathyab/clearpath_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'tathyab'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'tathyab'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/tathyab/anaconda3/condabin:/home/tathyab/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/tathyab:@/tmp/.ICE-unix/1814,unix/tathyab:/tmp/.ICE-unix/1814'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/afa5b81e_fc00_46a0_a312_c0c1c90966a6'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.S87RX2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.735'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/tathyab/clearpath_ws/install/project_clearpath:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/tathyab/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/tathyab/clearpath_ws/project_clearpath/build/project_clearpath'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/tathyab/anaconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/tathyab/clearpath_ws/install/project_clearpath:/opt/ros/humble')]), 'shell': False}
+[4.107208] (-) TimerEvent: {}
+[4.139543] (project_clearpath) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding CXX object _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o\x1b[0m\n'}
+[4.139715] (project_clearpath) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding CXX object libs/debris/CMakeFiles/myDebris.dir/debris_remover.cpp.o\x1b[0m\n'}
+[4.139812] (project_clearpath) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding CXX object libs/debris/CMakeFiles/myDebris.dir/debris_detection.cpp.o\x1b[0m\n'}
+[4.207314] (-) TimerEvent: {}
+[4.307607] (-) TimerEvent: {}
+[4.407907] (-) TimerEvent: {}
+[4.508214] (-) TimerEvent: {}
+[4.608498] (-) TimerEvent: {}
+[4.708779] (-) TimerEvent: {}
+[4.809057] (-) TimerEvent: {}
+[4.909334] (-) TimerEvent: {}
+[5.009623] (-) TimerEvent: {}
+[5.109895] (-) TimerEvent: {}
+[5.210206] (-) TimerEvent: {}
+[5.310485] (-) TimerEvent: {}
+[5.410802] (-) TimerEvent: {}
+[5.511052] (-) TimerEvent: {}
+[5.611356] (-) TimerEvent: {}
+[5.711637] (-) TimerEvent: {}
+[5.811902] (-) TimerEvent: {}
+[5.912139] (-) TimerEvent: {}
+[6.012413] (-) TimerEvent: {}
+[6.112676] (-) TimerEvent: {}
+[6.212941] (-) TimerEvent: {}
+[6.313163] (-) TimerEvent: {}
+[6.413398] (-) TimerEvent: {}
+[6.513690] (-) TimerEvent: {}
+[6.613966] (-) TimerEvent: {}
+[6.714234] (-) TimerEvent: {}
+[6.814502] (-) TimerEvent: {}
+[6.914777] (-) TimerEvent: {}
+[7.015061] (-) TimerEvent: {}
+[7.115337] (-) TimerEvent: {}
+[7.215629] (-) TimerEvent: {}
+[7.315907] (-) TimerEvent: {}
+[7.416202] (-) TimerEvent: {}
+[7.516491] (-) TimerEvent: {}
+[7.616782] (-) TimerEvent: {}
+[7.717075] (-) TimerEvent: {}
+[7.817365] (-) TimerEvent: {}
+[7.917650] (-) TimerEvent: {}
+[8.017949] (-) TimerEvent: {}
+[8.118247] (-) TimerEvent: {}
+[8.218527] (-) TimerEvent: {}
+[8.318837] (-) TimerEvent: {}
+[8.419157] (-) TimerEvent: {}
+[8.519441] (-) TimerEvent: {}
+[8.619724] (-) TimerEvent: {}
+[8.646624] (project_clearpath) StdoutLine: {'line': b'[ 30%] \x1b[32m\x1b[1mLinking CXX static library ../../../lib/libgtest.a\x1b[0m\n'}
+[8.719811] (-) TimerEvent: {}
+[8.799976] (project_clearpath) StdoutLine: {'line': b'[ 30%] Built target gtest\n'}
+[8.819920] (-) TimerEvent: {}
+[8.821580] (project_clearpath) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding CXX object _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o\x1b[0m\n'}
+[8.821803] (project_clearpath) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding CXX object _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o\x1b[0m\n'}
+[8.920025] (-) TimerEvent: {}
+[9.020298] (-) TimerEvent: {}
+[9.120567] (-) TimerEvent: {}
+[9.220856] (-) TimerEvent: {}
+[9.321119] (-) TimerEvent: {}
+[9.421420] (-) TimerEvent: {}
+[9.521667] (-) TimerEvent: {}
+[9.617707] (project_clearpath) StdoutLine: {'line': b'[ 53%] \x1b[32m\x1b[1mLinking CXX static library ../../../lib/libgtest_main.a\x1b[0m\n'}
+[9.621770] (-) TimerEvent: {}
+[9.688805] (project_clearpath) StdoutLine: {'line': b'[ 53%] Built target gtest_main\n'}
+[9.721901] (-) TimerEvent: {}
+[9.822242] (-) TimerEvent: {}
+[9.922532] (-) TimerEvent: {}
+[10.022823] (-) TimerEvent: {}
+[10.123076] (-) TimerEvent: {}
+[10.223327] (-) TimerEvent: {}
+[10.323597] (-) TimerEvent: {}
+[10.423857] (-) TimerEvent: {}
+[10.524095] (-) TimerEvent: {}
+[10.624352] (-) TimerEvent: {}
+[10.724578] (-) TimerEvent: {}
+[10.824863] (-) TimerEvent: {}
+[10.925091] (-) TimerEvent: {}
+[11.025315] (-) TimerEvent: {}
+[11.053999] (project_clearpath) StdoutLine: {'line': b'[ 61%] \x1b[32m\x1b[1mLinking CXX static library ../../../lib/libgmock.a\x1b[0m\n'}
+[11.125433] (-) TimerEvent: {}
+[11.136707] (project_clearpath) StdoutLine: {'line': b'[ 61%] Built target gmock\n'}
+[11.157082] (project_clearpath) StdoutLine: {'line': b'[ 69%] \x1b[32mBuilding CXX object _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o\x1b[0m\n'}
+[11.225559] (-) TimerEvent: {}
+[11.325782] (-) TimerEvent: {}
+[11.426010] (-) TimerEvent: {}
+[11.526273] (-) TimerEvent: {}
+[11.626526] (-) TimerEvent: {}
+[11.726777] (-) TimerEvent: {}
+[11.827012] (-) TimerEvent: {}
+[11.927275] (-) TimerEvent: {}
+[12.027538] (-) TimerEvent: {}
+[12.094811] (project_clearpath) StdoutLine: {'line': b'[ 76%] \x1b[32m\x1b[1mLinking CXX static library ../../../lib/libgmock_main.a\x1b[0m\n'}
+[12.127660] (-) TimerEvent: {}
+[12.155007] (project_clearpath) StdoutLine: {'line': b'[ 76%] Built target gmock_main\n'}
+[12.227782] (-) TimerEvent: {}
+[12.328037] (-) TimerEvent: {}
+[12.428296] (-) TimerEvent: {}
+[12.528556] (-) TimerEvent: {}
+[12.628804] (-) TimerEvent: {}
+[12.729054] (-) TimerEvent: {}
+[12.829314] (-) TimerEvent: {}
+[12.929592] (-) TimerEvent: {}
+[13.029856] (-) TimerEvent: {}
+[13.130190] (-) TimerEvent: {}
+[13.230458] (-) TimerEvent: {}
+[13.330717] (-) TimerEvent: {}
+[13.431027] (-) TimerEvent: {}
+[13.531275] (-) TimerEvent: {}
+[13.631638] (-) TimerEvent: {}
+[13.731875] (-) TimerEvent: {}
+[13.832200] (-) TimerEvent: {}
+[13.932465] (-) TimerEvent: {}
+[14.032709] (-) TimerEvent: {}
+[14.132957] (-) TimerEvent: {}
+[14.233195] (-) TimerEvent: {}
+[14.333433] (-) TimerEvent: {}
+[14.433677] (-) TimerEvent: {}
+[14.533936] (-) TimerEvent: {}
+[14.634183] (-) TimerEvent: {}
+[14.734434] (-) TimerEvent: {}
+[14.834687] (-) TimerEvent: {}
+[14.934959] (-) TimerEvent: {}
+[15.035175] (-) TimerEvent: {}
+[15.135433] (-) TimerEvent: {}
+[15.235675] (-) TimerEvent: {}
+[15.335919] (-) TimerEvent: {}
+[15.436152] (-) TimerEvent: {}
+[15.536398] (-) TimerEvent: {}
+[15.636650] (-) TimerEvent: {}
+[15.736896] (-) TimerEvent: {}
+[15.837167] (-) TimerEvent: {}
+[15.937423] (-) TimerEvent: {}
+[16.037666] (-) TimerEvent: {}
+[16.137915] (-) TimerEvent: {}
+[16.238174] (-) TimerEvent: {}
+[16.338421] (-) TimerEvent: {}
+[16.438667] (-) TimerEvent: {}
+[16.538910] (-) TimerEvent: {}
+[16.639166] (-) TimerEvent: {}
+[16.739430] (-) TimerEvent: {}
+[16.839680] (-) TimerEvent: {}
+[16.939924] (-) TimerEvent: {}
+[17.040190] (-) TimerEvent: {}
+[17.140434] (-) TimerEvent: {}
+[17.240681] (-) TimerEvent: {}
+[17.340944] (-) TimerEvent: {}
+[17.441205] (-) TimerEvent: {}
+[17.541462] (-) TimerEvent: {}
+[17.641723] (-) TimerEvent: {}
+[17.742032] (-) TimerEvent: {}
+[17.842371] (-) TimerEvent: {}
+[17.942738] (-) TimerEvent: {}
+[18.042990] (-) TimerEvent: {}
+[18.143269] (-) TimerEvent: {}
+[18.243528] (-) TimerEvent: {}
+[18.343789] (-) TimerEvent: {}
+[18.444041] (-) TimerEvent: {}
+[18.544302] (-) TimerEvent: {}
+[18.644556] (-) TimerEvent: {}
+[18.744819] (-) TimerEvent: {}
+[18.845095] (-) TimerEvent: {}
+[18.945441] (-) TimerEvent: {}
+[19.045690] (-) TimerEvent: {}
+[19.146038] (-) TimerEvent: {}
+[19.230624] (project_clearpath) StdoutLine: {'line': b'[ 84%] \x1b[32m\x1b[1mLinking CXX static library libmyDebris.a\x1b[0m\n'}
+[19.246168] (-) TimerEvent: {}
+[19.346517] (-) TimerEvent: {}
+[19.446794] (-) TimerEvent: {}
+[19.547009] (-) TimerEvent: {}
+[19.647356] (-) TimerEvent: {}
+[19.685034] (project_clearpath) StdoutLine: {'line': b'[ 84%] Built target myDebris\n'}
+[19.718818] (project_clearpath) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding CXX object app/CMakeFiles/collector_node.dir/main.cpp.o\x1b[0m\n'}
+[19.747435] (-) TimerEvent: {}
+[19.847719] (-) TimerEvent: {}
+[19.948027] (-) TimerEvent: {}
+[20.048379] (-) TimerEvent: {}
+[20.148643] (-) TimerEvent: {}
+[20.248907] (-) TimerEvent: {}
+[20.349205] (-) TimerEvent: {}
+[20.449534] (-) TimerEvent: {}
+[20.549792] (-) TimerEvent: {}
+[20.649982] (-) TimerEvent: {}
+[20.750238] (-) TimerEvent: {}
+[20.850498] (-) TimerEvent: {}
+[20.950771] (-) TimerEvent: {}
+[21.051020] (-) TimerEvent: {}
+[21.151253] (-) TimerEvent: {}
+[21.251511] (-) TimerEvent: {}
+[21.351845] (-) TimerEvent: {}
+[21.452114] (-) TimerEvent: {}
+[21.552367] (-) TimerEvent: {}
+[21.652618] (-) TimerEvent: {}
+[21.752862] (-) TimerEvent: {}
+[21.853097] (-) TimerEvent: {}
+[21.953350] (-) TimerEvent: {}
+[22.053602] (-) TimerEvent: {}
+[22.153858] (-) TimerEvent: {}
+[22.254080] (-) TimerEvent: {}
+[22.354328] (-) TimerEvent: {}
+[22.454580] (-) TimerEvent: {}
+[22.554830] (-) TimerEvent: {}
+[22.655008] (-) TimerEvent: {}
+[22.755252] (-) TimerEvent: {}
+[22.855506] (-) TimerEvent: {}
+[22.955750] (-) TimerEvent: {}
+[23.055997] (-) TimerEvent: {}
+[23.156238] (-) TimerEvent: {}
+[23.256476] (-) TimerEvent: {}
+[23.356713] (-) TimerEvent: {}
+[23.456958] (-) TimerEvent: {}
+[23.557177] (-) TimerEvent: {}
+[23.657425] (-) TimerEvent: {}
+[23.757664] (-) TimerEvent: {}
+[23.857905] (-) TimerEvent: {}
+[23.958141] (-) TimerEvent: {}
+[24.058411] (-) TimerEvent: {}
+[24.158661] (-) TimerEvent: {}
+[24.258952] (-) TimerEvent: {}
+[24.359256] (-) TimerEvent: {}
+[24.459511] (-) TimerEvent: {}
+[24.559760] (-) TimerEvent: {}
+[24.660009] (-) TimerEvent: {}
+[24.760249] (-) TimerEvent: {}
+[24.860496] (-) TimerEvent: {}
+[24.960745] (-) TimerEvent: {}
+[25.060999] (-) TimerEvent: {}
+[25.161253] (-) TimerEvent: {}
+[25.261501] (-) TimerEvent: {}
+[25.361741] (-) TimerEvent: {}
+[25.461986] (-) TimerEvent: {}
+[25.562223] (-) TimerEvent: {}
+[25.589551] (project_clearpath) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable collector_node\x1b[0m\n'}
+[25.662348] (-) TimerEvent: {}
+[25.762614] (-) TimerEvent: {}
+[25.862889] (-) TimerEvent: {}
+[25.963117] (-) TimerEvent: {}
+[26.063364] (-) TimerEvent: {}
+[26.163656] (-) TimerEvent: {}
+[26.263957] (-) TimerEvent: {}
+[26.364211] (-) TimerEvent: {}
+[26.464470] (-) TimerEvent: {}
+[26.564709] (-) TimerEvent: {}
+[26.665043] (-) TimerEvent: {}
+[26.710883] (project_clearpath) StderrLine: {'line': b'/usr/bin/ld: warning: libopencv_imgproc.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_imgproc.so.407\n'}
+[26.711183] (project_clearpath) StderrLine: {'line': b'/usr/bin/ld: warning: libopencv_core.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_core.so.407\n'}
+[26.724140] (project_clearpath) StdoutLine: {'line': b'[100%] Built target collector_node\n'}
+[26.735757] (project_clearpath) CommandEnded: {'returncode': 0}
+[26.765108] (-) TimerEvent: {}
+[26.765676] (project_clearpath) JobProgress: {'identifier': 'project_clearpath', 'progress': 'install'}
+[26.773646] (project_clearpath) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/tathyab/clearpath_ws/project_clearpath/build/project_clearpath'], 'cwd': '/home/tathyab/clearpath_ws/project_clearpath/build/project_clearpath', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'tathyab'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu'), ('HOME', '/home/tathyab'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/tathyab/clearpath_ws'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1844'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/tathyab/clearpath_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'tathyab'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'tathyab'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/tathyab/anaconda3/condabin:/home/tathyab/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/tathyab:@/tmp/.ICE-unix/1814,unix/tathyab:/tmp/.ICE-unix/1814'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/afa5b81e_fc00_46a0_a312_c0c1c90966a6'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.S87RX2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.735'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/tathyab/clearpath_ws/install/project_clearpath:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/tathyab/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/tathyab/clearpath_ws/project_clearpath/build/project_clearpath'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/tathyab/anaconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/tathyab/clearpath_ws/install/project_clearpath:/opt/ros/humble')]), 'shell': False}
+[26.781595] (project_clearpath) StdoutLine: {'line': b'-- Install configuration: "Debug"\n'}
+[26.781835] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/share/project_clearpath//launch\n'}
+[26.782067] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/share/project_clearpath//launch/collector_robot.launch.py\n'}
+[26.782176] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/share/project_clearpath//launch/spawn_trash.launch.py\n'}
+[26.782268] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/share/project_clearpath//launch/spawn_tbot3_custom.py\n'}
+[26.782320] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/share/project_clearpath//models\n'}
+[26.782373] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/share/project_clearpath//models/beer\n'}
+[26.782450] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/share/project_clearpath//models/beer/model.sdf\n'}
+[26.782535] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/share/project_clearpath//models/beer/model.config\n'}
+[26.782642] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/share/project_clearpath//models/trash_block\n'}
+[26.782694] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/share/project_clearpath//models/trash_block/model.sdf\n'}
+[26.782747] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/share/project_clearpath//models/turtlebot3_waffle_pi\n'}
+[26.782824] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/share/project_clearpath//models/turtlebot3_waffle_pi/model-1_4_.sdf\n'}
+[26.782876] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/share/project_clearpath//models/turtlebot3_waffle_pi/model.sdf\n'}
+[26.782948] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/share/project_clearpath//models/turtlebot3_waffle_pi/model.config\n'}
+[26.783064] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/share/project_clearpath//worlds\n'}
+[26.783128] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/share/project_clearpath//worlds/room2.world\n'}
+[26.783318] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/share/project_clearpath//worlds/gazebo_ros_depth_camera_demo.world\n'}
+[26.783444] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/share/project_clearpath//worlds/empty_world.world\n'}
+[26.783567] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/share/project_clearpath//worlds/disaster_world.world\n'}
+[26.783661] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/share/project_clearpath//urdf\n'}
+[26.783744] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/share/project_clearpath//urdf/common_properties.urdf\n'}
+[26.783827] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/share/project_clearpath//urdf/turtlebot3_waffle_pi.urdf\n'}
+[26.784061] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/share/ament_index/resource_index/package_run_dependencies/project_clearpath\n'}
+[26.784181] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/share/ament_index/resource_index/parent_prefix_path/project_clearpath\n'}
+[26.784321] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/share/project_clearpath/environment/ament_prefix_path.sh\n'}
+[26.784463] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/share/project_clearpath/environment/ament_prefix_path.dsv\n'}
+[26.784625] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/share/project_clearpath/environment/path.sh\n'}
+[26.784734] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/share/project_clearpath/environment/path.dsv\n'}
+[26.784811] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/share/project_clearpath/local_setup.bash\n'}
+[26.784910] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/share/project_clearpath/local_setup.sh\n'}
+[26.785101] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/share/project_clearpath/local_setup.zsh\n'}
+[26.785205] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/share/project_clearpath/local_setup.dsv\n'}
+[26.785282] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/share/project_clearpath/package.dsv\n'}
+[26.785496] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/share/ament_index/resource_index/packages/project_clearpath\n'}
+[26.785651] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/share/project_clearpath/cmake/project_clearpathConfig.cmake\n'}
+[26.785760] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/share/project_clearpath/cmake/project_clearpathConfig-version.cmake\n'}
+[26.785840] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/share/project_clearpath/package.xml\n'}
+[26.786320] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/include\n'}
+[26.786403] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/include/gmock\n'}
+[26.786608] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/include/gmock/gmock-more-actions.h\n'}
+[26.786785] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/include/gmock/internal\n'}
+[26.786945] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/include/gmock/internal/gmock-internal-utils.h\n'}
+[26.787093] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/include/gmock/internal/custom\n'}
+[26.787190] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/include/gmock/internal/custom/README.md\n'}
+[26.787334] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/include/gmock/internal/custom/gmock-port.h\n'}
+[26.787437] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/include/gmock/internal/custom/gmock-generated-actions.h\n'}
+[26.787595] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/include/gmock/internal/custom/gmock-matchers.h\n'}
+[26.787767] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/include/gmock/internal/gmock-pp.h\n'}
+[26.787902] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/include/gmock/internal/gmock-port.h\n'}
+[26.788025] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/include/gmock/gmock.h\n'}
+[26.788093] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/include/gmock/gmock-spec-builders.h\n'}
+[26.788235] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/include/gmock/gmock-function-mocker.h\n'}
+[26.788405] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/include/gmock/gmock-more-matchers.h\n'}
+[26.788520] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/include/gmock/gmock-matchers.h\n'}
+[26.788711] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/include/gmock/gmock-actions.h\n'}
+[26.788873] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/include/gmock/gmock-nice-strict.h\n'}
+[26.788978] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/include/gmock/gmock-cardinalities.h\n'}
+[26.789171] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/lib/libgmock.a\n'}
+[26.792988] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/lib/libgmock_main.a\n'}
+[26.793477] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/lib/pkgconfig/gmock.pc\n'}
+[26.793702] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/lib/pkgconfig/gmock_main.pc\n'}
+[26.794229] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/lib/cmake/GTest/GTestTargets.cmake\n'}
+[26.794449] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/lib/cmake/GTest/GTestTargets-debug.cmake\n'}
+[26.794581] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/lib/cmake/GTest/GTestConfigVersion.cmake\n'}
+[26.794822] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/lib/cmake/GTest/GTestConfig.cmake\n'}
+[26.794946] (project_clearpath) StdoutLine: {'line': b'-- Up-to-date: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/include\n'}
+[26.795151] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/include/gtest\n'}
+[26.795294] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/include/gtest/gtest-message.h\n'}
+[26.795410] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/include/gtest/gtest-assertion-result.h\n'}
+[26.795612] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/include/gtest/internal\n'}
+[26.795742] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/include/gtest/internal/gtest-param-util.h\n'}
+[26.795801] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/include/gtest/internal/custom\n'}
+[26.795938] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/include/gtest/internal/custom/README.md\n'}
+[26.796047] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/include/gtest/internal/custom/gtest-printers.h\n'}
+[26.796121] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/include/gtest/internal/custom/gtest-port.h\n'}
+[26.796224] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/include/gtest/internal/custom/gtest.h\n'}
+[26.796276] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/include/gtest/internal/gtest-port-arch.h\n'}
+[26.796331] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/include/gtest/internal/gtest-filepath.h\n'}
+[26.796404] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/include/gtest/internal/gtest-death-test-internal.h\n'}
+[26.796477] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/include/gtest/internal/gtest-internal.h\n'}
+[26.796544] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/include/gtest/internal/gtest-port.h\n'}
+[26.796696] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/include/gtest/internal/gtest-string.h\n'}
+[26.796793] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/include/gtest/internal/gtest-type-util.h\n'}
+[26.796890] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/include/gtest/gtest-test-part.h\n'}
+[26.797100] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/include/gtest/gtest-printers.h\n'}
+[26.797250] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/include/gtest/gtest-spi.h\n'}
+[26.797387] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/include/gtest/gtest_prod.h\n'}
+[26.797484] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/include/gtest/gtest_pred_impl.h\n'}
+[26.797615] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/include/gtest/gtest-matchers.h\n'}
+[26.797724] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/include/gtest/gtest-param-test.h\n'}
+[26.797844] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/include/gtest/gtest.h\n'}
+[26.798070] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/include/gtest/gtest-death-test.h\n'}
+[26.798237] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/include/gtest/gtest-typed-test.h\n'}
+[26.798390] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/lib/libgtest.a\n'}
+[26.808612] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/lib/libgtest_main.a\n'}
+[26.809035] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/lib/pkgconfig/gtest.pc\n'}
+[26.809273] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/lib/pkgconfig/gtest_main.pc\n'}
+[26.810049] (project_clearpath) StdoutLine: {'line': b'-- Installing: /home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/lib/project_clearpath/collector_node\n'}
+[26.834185] (project_clearpath) StdoutLine: {'line': b'-- Set runtime path of "/home/tathyab/clearpath_ws/project_clearpath/install/project_clearpath/lib/project_clearpath/collector_node" to ""\n'}
+[26.836320] (project_clearpath) CommandEnded: {'returncode': 0}
+[26.865231] (-) TimerEvent: {}
+[26.881571] (project_clearpath) JobEnded: {'identifier': 'project_clearpath', 'rc': 0}
+[26.882070] (-) EventReactorShutdown: {}

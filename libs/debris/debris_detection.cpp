@@ -51,15 +51,43 @@ DebrisDetector::DebrisDetector() : Node("debris_detector") {
  * @brief Publishes velocity commands to navigate the robot towards detected debris.
  */
 void DebrisDetector::navigate_to_debris() {
+    // TwistMsg velocity_command;
+    
+    // // Constants for the proportional controller
+    // const double Kp_linear = 0.1;  // Proportional gain for linear velocity
+    // const double Kp_angular = 0.05; // Proportional gain for angular velocity
+    // const double max_linear_speed = 0.2;
+    // const double max_angular_speed = 0.5;
+    
+    // // Calculate errors
+    // double linear_error = (stop_) ? 0 : 1.0;  // If stop_ is true, we want to stop moving forward
+    // double angular_error = 0;
+    
+    // if (rotate_right_) {
+    //     angular_error = -1.0;  // Negative error to rotate right
+    // } else if (rotate_left_) {
+    //     angular_error = 1.0;   // Positive error to rotate left
+    // }
+    
+    // // Calculate proportional control outputs
+    // double linear_output = Kp_linear * linear_error;
+    // double angular_output = Kp_angular * angular_error;
+    
+    // // Apply limits to the outputs
+    // velocity_command.linear.x = std::clamp(linear_output, 0.0, max_linear_speed);
+    // velocity_command.angular.z = std::clamp(angular_output, -max_angular_speed, max_angular_speed);
+    
+    // velocity_publisher_->publish(velocity_command);
+// }
     TwistMsg velocity_command;
     if (rotate_right_) {
         velocity_command.angular.z = -0.1;
-        velocity_command.linear.x = 0.0;
+        velocity_command.linear.x = 0.02;
     } else if (rotate_left_) {
         velocity_command.angular.z = 0.1;
-        velocity_command.linear.x = 0.0;
+        velocity_command.linear.x = 0.02;
     } else if (move_forward_) {
-        velocity_command.linear.x = 0.2;
+        velocity_command.linear.x = 0.10;
         velocity_command.angular.z = 0.0;
     } else if (stop_) {
         velocity_command.linear.x = 0.0;
@@ -112,6 +140,7 @@ void DebrisDetector::process_image_callback(const ImageMsg::ConstSharedPtr& msg)
         if (debris_detected_) {
             double max_area = 0.0;
             int largest_contour_index = -1;
+            
 
             for (size_t i = 0; i < contours.size(); ++i) {
                 double area = cv::contourArea(contours[i]);
@@ -137,8 +166,8 @@ void DebrisDetector::process_image_callback(const ImageMsg::ConstSharedPtr& msg)
                 } else {
                     rotate_left_ = false;
                     rotate_right_ = false;
-                    move_forward_ = area <= 10000;
-                    stop_ = area > 10000;
+                    move_forward_ = area <= 40000;
+                    stop_ = area > 40000;
                 }
 
             // Draw bounding box around debris on the RGB image

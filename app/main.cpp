@@ -20,41 +20,124 @@
  * @param argv The array of command-line arguments.
  * @return int Exit status of the program. Returns 0 on successful execution.
  */
+// int main(int argc, char* argv[]) {
+//     rclcpp::init(argc, argv);
+
+//     auto debris_remover = std::make_shared<DebrisRemover>();
+    
+//     // Initialize the ROS2 framework
+//     // rclcpp::init(argc, argv);
+
+//     // Create a shared pointer to the DebrisDetector object
+//     auto debris_detector = std::make_shared<DebrisDetector>();
+    
+    
+
+//     // Log the start of the debris detection process
+//     RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Starting debris detection...");
+
+//     // Begin detecting and handling debris
+//     // debris_detector->detect_and_handle_debris();
+//     std::vector<std::string> object_list = {"trash_block_0", "beer_1"};
+
+//     while (rclcpp::ok() && !object_list.empty()){
+//         auto iterator = object_list.begin();
+//         while (iterator != object_list.end()){
+//             if (debris_detector->detect_and_handle_debris()) {
+
+//             rclcpp::sleep_for(1s);
+
+//                 if (debris_remover->remove_debris(*iterator)) {
+//                         RCLCPP_INFO(rclcpp::get_logger("main"), "Removed %s", iterator->c_str());
+//                         iterator = object_list.erase(iterator);
+//                     } else {
+//                         RCLCPP_ERROR(rclcpp::get_logger("main"), "Failed to remove %s", iterator->c_str());
+//                         ++iterator;
+//                     }
+//             } else {
+//                 ++iterator;
+//             }
+
+//         // while (it!=object_list.end()) {
+//         //     if (debris_detector->detect_and_handle_debris()) {
+//         // }
+//         // // for (const auto& object : object_list) {    
+//         // // if (debris_detector->detect_and_handle_debris()) {
+
+//         //     // rclcpp::sleep_for(1s);
+//         //     // debris_remover->remove_debris(object);
+            
+//         //         RCLCPP_ERROR(rclcpp::get_logger("main"), "Failed to remove %s", object.c_str());
+//         //     }
+
+//             if (debris_detector->move2next_debris()){
+        
+//             rclcpp::sleep_for(1s);
+//             debris_remover->remove_debris(*iterator); 
+        
+//             } else {
+//                 break;
+//             }
+//         }
+        
+//         if (object_list.empty()) {
+//                 RCLCPP_INFO(rclcpp::get_logger("main"), "All objects removed. Closing node.");
+//                 break;
+//         }}
+
+
+//         rclcpp::shutdown();
+//         return 0;
+//     }
+
+
 int main(int argc, char* argv[]) {
     rclcpp::init(argc, argv);
 
     auto debris_remover = std::make_shared<DebrisRemover>();
-    
-    // Initialize the ROS2 framework
-    // rclcpp::init(argc, argv);
-
-    // Create a shared pointer to the DebrisDetector object
     auto debris_detector = std::make_shared<DebrisDetector>();
-    
 
-    // Log the start of the debris detection process
     RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Starting debris detection...");
 
-    // Begin detecting and handling debris
-    // debris_detector->detect_and_handle_debris();
-    while (rclcpp::ok())
-    {
-    
-    if (debris_detector->detect_and_handle_debris()) {
+    std::vector<std::string> object_list = {"trash_block_0", "beer_1", "coke_can_2", "cricket_ball_4"};
 
-        rclcpp::sleep_for(1s);
-        debris_remover->remove_debris(); }
+    while (rclcpp::ok() && !object_list.empty()) {
+        auto iterator = object_list.begin();
+        while (iterator != object_list.end()) {
+            if (debris_detector->detect_and_handle_debris()) {
+                rclcpp::sleep_for(std::chrono::seconds(1));
 
-    if (debris_detector->move2next_debris()){
-        
-        rclcpp::sleep_for(1s);
-        debris_remover->remove_debris(); 
-        
-        } else {
+                if (debris_detector->detect_and_handle_debris()) {
+                    if (debris_remover->remove_debris(*iterator)) {
+                        RCLCPP_INFO(rclcpp::get_logger("main"), "Removed %s", iterator->c_str());
+                        iterator = object_list.erase(iterator);
+                    } else {
+                        // RCLCPP_ERROR(rclcpp::get_logger("main"), "Failed to remove %s", iterator->c_str());
+                        ++iterator;
+                    }
+                } else {
+                    RCLCPP_INFO(rclcpp::get_logger("main"), "Object %s not detected, moving to next", iterator->c_str());
+                    ++iterator;
+                }
+            } else {
+                RCLCPP_INFO(rclcpp::get_logger("main"), "No debris detected, continuing search");
+                break;
+            }
+        }
+
+        if (object_list.empty()) {
+            RCLCPP_INFO(rclcpp::get_logger("main"), "All objects removed. Closing node.");
             break;
-        }}
-        
-    rclcpp::shutdown();
+        }
 
+        if (debris_detector->move2next_debris()) {
+            rclcpp::sleep_for(std::chrono::seconds(1));
+        } else {
+            RCLCPP_INFO(rclcpp::get_logger("main"), "No more debris to move to. Ending detection.");
+            break;
+        }
+    }
+
+    rclcpp::shutdown();
     return 0;
 }

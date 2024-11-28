@@ -23,16 +23,16 @@ DebrisRemover::DebrisRemover() : rclcpp::Node("debris_remover"){
 
     remove_debris_node = rclcpp::Node::make_shared("debris_remover");
 
-    debris_idx = {};
+    // debris_idx = {};
 
-    debris_counter = 3;
+    // debris_counter = 3;
 
-    for (int i=0; i<debris_counter; i++){
-        debris_idx.push_back(i);
-    }
+    // for (int i=0; i<debris_counter; i++){
+    //     debris_idx.push_back(i);
+    // }
 }
 
-bool DebrisRemover::remove_debris() {
+bool DebrisRemover::remove_debris(std::string object) {
     while (!unspawn_client->wait_for_service(5s)){
         if(!rclcpp::ok()){
             RCLCPP_ERROR(this->get_logger(), "Service Call Failed");
@@ -51,7 +51,7 @@ bool DebrisRemover::remove_debris() {
     // }
     
     
-    request->name = "trash_block_0";
+    request->name = object;
 
     auto srv_response = unspawn_client->async_send_request(request);
     auto ret = rclcpp::spin_until_future_complete(remove_debris_node, srv_response, 3s);
@@ -63,12 +63,12 @@ bool DebrisRemover::remove_debris() {
     }    
 }
 
-int DebrisRemover::get_recent_debris(){
-    if (debris_idx.empty()){
-        return -1;
-    };
+// int DebrisRemover::get_recent_debris(){
+//     if (debris_idx.empty()){
+//         return -1;
+//     };
 
-    int closest_idx = static_cast<int> (debris_idx.front());
-    debris_idx.pop_front();
-    return closest_idx;
-}
+//     int closest_idx = static_cast<int> (debris_idx.front());
+//     debris_idx.pop_front();
+//     return closest_idx;
+// }
