@@ -51,34 +51,7 @@ DebrisDetector::DebrisDetector() : Node("debris_detector") {
  * @brief Publishes velocity commands to navigate the robot towards detected debris.
  */
 void DebrisDetector::navigate_to_debris() {
-    // TwistMsg velocity_command;
-    
-    // // Constants for the proportional controller
-    // const double Kp_linear = 0.1;  // Proportional gain for linear velocity
-    // const double Kp_angular = 0.05; // Proportional gain for angular velocity
-    // const double max_linear_speed = 0.2;
-    // const double max_angular_speed = 0.5;
-    
-    // // Calculate errors
-    // double linear_error = (stop_) ? 0 : 1.0;  // If stop_ is true, we want to stop moving forward
-    // double angular_error = 0;
-    
-    // if (rotate_right_) {
-    //     angular_error = -1.0;  // Negative error to rotate right
-    // } else if (rotate_left_) {
-    //     angular_error = 1.0;   // Positive error to rotate left
-    // }
-    
-    // // Calculate proportional control outputs
-    // double linear_output = Kp_linear * linear_error;
-    // double angular_output = Kp_angular * angular_error;
-    
-    // // Apply limits to the outputs
-    // velocity_command.linear.x = std::clamp(linear_output, 0.0, max_linear_speed);
-    // velocity_command.angular.z = std::clamp(angular_output, -max_angular_speed, max_angular_speed);
-    
-    // velocity_publisher_->publish(velocity_command);
-// }
+
     TwistMsg velocity_command;
     if (rotate_right_) {
         velocity_command.angular.z = -0.1;
@@ -261,25 +234,6 @@ bool DebrisDetector::detect_and_handle_debris() {
             rotate_right_ = false;
 
             return true;
-
-            // double start_orientation = current_orientation_;
-            // while (rclcpp::ok() && std::abs(current_orientation_ - start_orientation) < 2 * M_PI) {
-            //     TwistMsg scan_cmd;
-            //     scan_cmd.angular.z = 0.5;  // Adjust rotation speed as needed
-            //     velocity_publisher_->publish(scan_cmd);
-            //     rclcpp::spin_some(shared_from_this());
-
-
-            // if (debris_detected_) {
-            //         RCLCPP_INFO(this->get_logger(), "New object detected. Resuming navigation.");
-            //         break;
-            //     }
-            // }
-
-            // if (!debris_detected_) {
-            //     RCLCPP_INFO(this->get_logger(), "No more objects detected. Ending detection.");
-            //     return true;
-            // }
         }
     }
     return false;

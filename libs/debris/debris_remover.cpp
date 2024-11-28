@@ -23,13 +23,6 @@ DebrisRemover::DebrisRemover() : rclcpp::Node("debris_remover"){
 
     remove_debris_node = rclcpp::Node::make_shared("debris_remover");
 
-    // debris_idx = {};
-
-    // debris_counter = 3;
-
-    // for (int i=0; i<debris_counter; i++){
-    //     debris_idx.push_back(i);
-    // }
 }
 
 bool DebrisRemover::remove_debris(std::string object) {
@@ -43,12 +36,7 @@ bool DebrisRemover::remove_debris(std::string object) {
     }
 
     auto request = std::make_shared<gazebo_msgs::srv::DeleteEntity::Request>();
-    // int closest_debris = get_recent_debris();
-    // RCLCPP_INFO(this->get_logger(), "No Debris Left %d", closest_debris);
-    // if (closest_debris == -1) {
-    //     RCLCPP_ERROR(this->get_logger(), "No Debris Left");
-    //     return false;
-    // }
+
     
     
     request->name = object;
