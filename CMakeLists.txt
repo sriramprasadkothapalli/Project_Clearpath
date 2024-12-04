@@ -136,7 +136,7 @@ if(WANT_COVERAGE)
     EXECUTABLE collector_node
     EXCLUDE
     "test/test_level1.cpp"
-    # "test/test_level2.cpp"
+    "test/test_level2.cpp"
     INCLUDE ${DEBRIS_SOURCES}
   )
 endif()
