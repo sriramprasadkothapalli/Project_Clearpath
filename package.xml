@@ -6,7 +6,9 @@
   <description>Package for launching TurtleBot3 in Gazebo using an empty world.</description>
 
   <maintainer email="sriram21@umd.edu">sriram</maintainer>
-  <license>Apache-2.0</license>
+  <maintainer email="bhavana3@umd.edu">sriram</maintainer>
+  <maintainer email="tathyab@umd.edu">sriram</maintainer>
+  <license>MIT</license>
 
   <!-- Build Dependencies -->
   <buildtool_depend>ament_cmake</buildtool_depend>
