@@ -2,34 +2,52 @@ name: CI Workflow with Unit Tests and Codecov
 
 on:
   push:
-    branches: [ "main", "object_detection_navigation" ]
+    branches: [ "main", "object_detection_navigation", "clearpath_world" ]
   pull_request:
-    branches: [ "main", "object_detection_navigation" ]
+    branches: [ "main", "object_detection_navigation", "clearpath_world" ]
     types: [opened]
   workflow_dispatch:
 
 jobs:
   build-run-upload:
-    # Create a container of the latest Ubuntu, other values could be
-    # ubuntu-latest, ubuntu-22.04, etc.
-    runs-on: ubuntu-latest       # any ubuntu that has docker
+    runs-on: ubuntu-latest
     defaults:
       run:
-        shell: bash       # specify bash for use with docker container
+        shell: bash
     container:
-      image: osrf/ros:humble-desktop # use ROS Humble from docker hub repository
+      image: osrf/ros:humble-desktop
     steps:
-      # We want to use GitHub CI checkout version 3 to check out our branch
       - uses: actions/checkout@v3
-      
-      # Install some system pacakges
-      - name: Install build packages
+
+      # Install build and OpenCV packages
+      - name: Install build packages and OpenCV headless version
         run: |
           sudo apt update
           sudo apt install -y software-properties-common
           sudo apt install -y doxygen lcov gcovr
           sudo apt install -y ros-humble-ament-cmake python3-colcon-common-extensions ros-humble-gazebo-ros-pkgs
           
+          # Install OpenCV dependencies for headless mode
+          sudo apt install -y libopencv-dev libopencv-core-dev libopencv-imgproc-dev libopencv-highgui-dev
+          sudo apt install -y libgtk-3-dev
+          sudo apt install -y libgl1-mesa-glx libxrender1 libfontconfig1
+          
+          # Install Xvfb
+          sudo apt-get install -y xvfb
+
+      # Set up Xvfb
+      - name: Set up Xvfb
+        run: |
+          Xvfb :99 -ac &
+          echo "DISPLAY=:99" >> $GITHUB_ENV
+
+      # Set OpenCV to use headless mode
+      - name: Set OpenCV environment to headless
+        run: |
+          echo "export OPENCV_GUI=OFF" >> $GITHUB_ENV
+          echo "export OPENCV_HEADLESS=1" >> $GITHUB_ENV
+          echo "OPENCV_VIDEOIO_PRIORITY_LIST=FFMPEG" >> $GITHUB_ENV
+
       # Run all unit test, integration test, and generate combined coverage report
       - name: Build, run unit test, and generate coverage report
         run: |
@@ -40,7 +58,7 @@ jobs:
       - name: Upload coverage result to CodeCov
         uses: codecov/codecov-action@v3
         with:
-          token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
-          files: /github/home/ros2_ws/filtered_coverage.info 
-          fail_ci_if_error: true # optional (default = false)
-          verbose: true # optional (default = false)      
+          token: ${{ secrets.CODECOV_TOKEN }}
+          files: /github/home/ros2_ws/filtered_coverage.info
+          fail_ci_if_error: true
+          verbose: true
