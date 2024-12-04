@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['runandverify_1166',['RunAndVerify',['../classgoogletest-break-on-failure-unittest_1_1_g_test_break_on_failure_unit_test.html#a04676ed51e337fa6be3f99a73a87040d',1,'googletest-break-on-failure-unittest.GTestBreakOnFailureUnitTest.RunAndVerify()'],['../classgoogletest-filter-unittest_1_1_g_test_filter_unit_test.html#af70e720e3178314cb7ffb4268594ef2b',1,'googletest-filter-unittest.GTestFilterUnitTest.RunAndVerify()'],['../classgoogletest-list-tests-unittest_1_1_g_test_list_tests_unit_test.html#a6630e10404717e8edd3df1439fb0d81c',1,'googletest-list-tests-unittest.GTestListTestsUnitTest.RunAndVerify()'],['../classgoogletest-throw-on-failure-test_1_1_throw_on_failure_test.html#ac9966623ba3bbd94be99aef689db43f3',1,'googletest-throw-on-failure-test.ThrowOnFailureTest.RunAndVerify()']]],
-  ['runandverifyallowingdisabled_1167',['RunAndVerifyAllowingDisabled',['../classgoogletest-filter-unittest_1_1_g_test_filter_unit_test.html#ad4202582f4fbc27a7e4ff9e751b1046f',1,'googletest-filter-unittest::GTestFilterUnitTest']]],
-  ['runandverifywithsharding_1168',['RunAndVerifyWithSharding',['../classgoogletest-filter-unittest_1_1_g_test_filter_unit_test.html#a9facb1098281a67776081c772fdd78d5',1,'googletest-filter-unittest::GTestFilterUnitTest']]]
+  ['set_5fdebris_5fcounter_33',['set_debris_counter',['../class_debris_remover.html#a5a99dbda5661da4b00e4ed4b703ab985',1,'DebrisRemover']]],
+  ['set_5fremove_5fdebris_5fnode_34',['set_remove_debris_node',['../class_debris_remover.html#a3cd0b5407bf789411ed8718c698fb545',1,'DebrisRemover']]],
+  ['set_5funspawn_5fclient_35',['set_unspawn_client',['../class_debris_remover.html#aedab0f87c73725eb8265fdec63da7beb',1,'DebrisRemover']]]
 ];

@@ -28,7 +28,7 @@
    <div id="projectname">Project Clearpath
    &#160;<span id="projectnumber">1.0</span>
    </div>
-   <div id="projectbrief">ENPM700 Final Project</div>
+   <div id="projectbrief">Disaster Site Cleanup Robot</div>
   </td>
  </tr>
  </tbody>
@@ -95,7 +95,7 @@ Inheritance diagram for DebrisDetector:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_debris_detector__inherit__graph.png" border="0" usemap="#a_debris_detector_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_debris_detector_inherit__map" id="a_debris_detector_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,131,233,267"/>
+<area shape="rect" title=" " alt="" coords="5,131,233,355"/>
 <area shape="rect" title=" " alt="" coords="68,5,171,83"/>
 </map>
 </div>
@@ -104,7 +104,7 @@ Collaboration diagram for DebrisDetector:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_debris_detector__coll__graph.png" border="0" usemap="#a_debris_detector_coll__map" alt="Collaboration graph"/></div>
 <map name="a_debris_detector_coll__map" id="a_debris_detector_coll__map">
-<area shape="rect" title=" " alt="" coords="5,131,233,267"/>
+<area shape="rect" title=" " alt="" coords="5,131,233,355"/>
 <area shape="rect" title=" " alt="" coords="68,5,171,83"/>
 </map>
 </div>
@@ -126,6 +126,51 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a67799878ebc2b4adf952f5a7d7c7256d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_debris_detector.html#a67799878ebc2b4adf952f5a7d7c7256d">detect_and_handle_debris</a> ()</td></tr>
 <tr class="memdesc:a67799878ebc2b4adf952f5a7d7c7256d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main function to detect debris and adjust robot behavior.  <a href="class_debris_detector.html#a67799878ebc2b4adf952f5a7d7c7256d">More...</a><br /></td></tr>
 <tr class="separator:a67799878ebc2b4adf952f5a7d7c7256d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a335243a8a0255268c640a364f6b42d7b"><td class="memItemLeft" align="right" valign="top"><a id="a335243a8a0255268c640a364f6b42d7b"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>move2next_debris</b> ()</td></tr>
+<tr class="separator:a335243a8a0255268c640a364f6b42d7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2afb2079a431ada557b0a85df66eaef3"><td class="memItemLeft" align="right" valign="top"><a id="a2afb2079a431ada557b0a85df66eaef3"></a>
+cv::Mat &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_current_image</b> ()</td></tr>
+<tr class="separator:a2afb2079a431ada557b0a85df66eaef3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b843adbd72264249185725f996e9d1a"><td class="memItemLeft" align="right" valign="top"><a id="a9b843adbd72264249185725f996e9d1a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_debris_detected</b> ()</td></tr>
+<tr class="separator:a9b843adbd72264249185725f996e9d1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bee43c71787f6615dcc24e53d07c986"><td class="memItemLeft" align="right" valign="top"><a id="a0bee43c71787f6615dcc24e53d07c986"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>get_current_orientation</b> ()</td></tr>
+<tr class="separator:a0bee43c71787f6615dcc24e53d07c986"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4ceb528e93e26b85ac5057aacd24ccb"><td class="memItemLeft" align="right" valign="top"><a id="ac4ceb528e93e26b85ac5057aacd24ccb"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_rotate_left</b> ()</td></tr>
+<tr class="separator:ac4ceb528e93e26b85ac5057aacd24ccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea6bfafe0f1baf101a87c2171efa8db3"><td class="memItemLeft" align="right" valign="top"><a id="aea6bfafe0f1baf101a87c2171efa8db3"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_rotate_right</b> ()</td></tr>
+<tr class="separator:aea6bfafe0f1baf101a87c2171efa8db3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18928ae0cfe751fdaf48c6d7bcf18c6d"><td class="memItemLeft" align="right" valign="top"><a id="a18928ae0cfe751fdaf48c6d7bcf18c6d"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_stop</b> () const</td></tr>
+<tr class="separator:a18928ae0cfe751fdaf48c6d7bcf18c6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac23775be2bc3dd7661b0a8d2257dddc8"><td class="memItemLeft" align="right" valign="top"><a id="ac23775be2bc3dd7661b0a8d2257dddc8"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>get_move_forward</b> () const</td></tr>
+<tr class="separator:ac23775be2bc3dd7661b0a8d2257dddc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a691102735adf81883b9219b43fd4e390"><td class="memItemLeft" align="right" valign="top"><a id="a691102735adf81883b9219b43fd4e390"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>set_rotate_right</b> (bool value)</td></tr>
+<tr class="separator:a691102735adf81883b9219b43fd4e390"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae29b8071e819638d4a10d22496f14bbc"><td class="memItemLeft" align="right" valign="top"><a id="ae29b8071e819638d4a10d22496f14bbc"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>set_rotate_left</b> (bool value)</td></tr>
+<tr class="separator:ae29b8071e819638d4a10d22496f14bbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2f6fdd687d69b45ed52e6b21cac9825"><td class="memItemLeft" align="right" valign="top"><a id="ad2f6fdd687d69b45ed52e6b21cac9825"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>set_move_forward</b> (bool value)</td></tr>
+<tr class="separator:ad2f6fdd687d69b45ed52e6b21cac9825"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6217760a886a9baf35d9bbc5111bfb13"><td class="memItemLeft" align="right" valign="top"><a id="a6217760a886a9baf35d9bbc5111bfb13"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>set_stop</b> (bool value)</td></tr>
+<tr class="separator:a6217760a886a9baf35d9bbc5111bfb13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4a8032c76ddf00be8cfe0c7e3fb344b"><td class="memItemLeft" align="right" valign="top"><a id="aa4a8032c76ddf00be8cfe0c7e3fb344b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>set_debris_detected</b> (bool value)</td></tr>
+<tr class="separator:aa4a8032c76ddf00be8cfe0c7e3fb344b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a211961037b542cddd4bd6560eb57c633"><td class="memItemLeft" align="right" valign="top"><a id="a211961037b542cddd4bd6560eb57c633"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>set_current_orientation</b> (double value)</td></tr>
+<tr class="separator:a211961037b542cddd4bd6560eb57c633"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6b70f8883a76ed503663176564317d9"><td class="memItemLeft" align="right" valign="top"><a id="ad6b70f8883a76ed503663176564317d9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>set_velocity_publisher</b> (const rclcpp::Publisher&lt; TwistMsg &gt;::SharedPtr &amp;publisher)</td></tr>
+<tr class="separator:ad6b70f8883a76ed503663176564317d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a49311c67fc9a88685a8cfbf095bd6456"></a>
@@ -264,8 +309,8 @@ false If no debris is detected</dd></dl>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>include/<a class="el" href="debris__detection_8hpp_source.html">debris_detection.hpp</a></li>
-<li>src/<a class="el" href="debris__detection_8cpp.html">debris_detection.cpp</a></li>
+<li>libs/debris/<a class="el" href="debris__detection_8hpp_source.html">debris_detection.hpp</a></li>
+<li>libs/debris/<a class="el" href="debris__detection_8cpp.html">debris_detection.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

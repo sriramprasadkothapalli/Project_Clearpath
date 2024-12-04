@@ -1,0 +1,4 @@
+<map id="libs/debris/debris_detection.hpp" name="libs/debris/debris_detection.hpp">
+<area shape="rect" id="node1" title="Header file for debris detection." alt="" coords="5,5,139,47"/>
+<area shape="rect" id="node2" href="$debris__detection_8cpp.html" title="Implementation of the DebrisDetector class for detecting and handling debris using ROS2 and OpenCV." alt="" coords="5,95,139,136"/>
+</map>

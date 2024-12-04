@@ -1,0 +1,4 @@
+<map id="DebrisRemover" name="DebrisRemover">
+<area shape="rect" id="node1" title="A ROS2 node for detecting and removing debris in the robot&#39;s environment." alt="" coords="5,131,216,311"/>
+<area shape="rect" id="node2" title=" " alt="" coords="59,5,162,83"/>
+</map>
