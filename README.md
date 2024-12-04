@@ -5,16 +5,16 @@ ENPM700-Final Project
 # C++ Boilerplate v2 Badges
 ![CICD Workflow status](https://github.com/sriramprasadkothapalli/project_clearpath/actions/workflows/run-test-and-upload-codecov.yml/badge.svg) [![codecov](https://codecov.io/gh/sriramprasadkothapalli/project_clearpath/graph/badge.svg?token=0NZGAQ9FZ2)](https://codecov.io/gh/sriramprasadkothapalli/project_clearpath) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-| Role / Part   | Phase 1                   | 
-|---------------|---------------------------|
-|Driver         |Sri ram Prasad Kothapalli  |
-|Navigator      |Bhavana B Rao              |
-|Design Keeper  |Tathya Bhatt               |
+| Role / Part   | Phase 1                   | Phase 2                   | Phase Testing             |
+|---------------|---------------------------|---------------------------|---------------------------|
+|Driver         |Sriram Prasad Kothapalli   |Tathya Bhatt               |Bhavana B Rao              |
+|Navigator      |Bhavana B Rao              |Sriram Prasad Kothapalli   |Tathya Bhatt               |
+|Design Keeper  |Tathya Bhatt               |Bhavana B Rao              |Sriram Prasad Kothapalli   |
 
 
 
-"Project Clearpath" is an autonomous robot designed for disaster site cleanup, capable of identifying, localizing, and prioritizing hazardous debris. It autonomously navigates sites, detecting debris types, estimating 3D locations, and assigning priority based on hazard level.
-This repository contains deliverables for midterm project of Bhavana B Rao, Sriramprasad Kothapalli and Tathya Bhatt as a part of the course ENPM700: Software Development for Robotics at the University of Maryland.
+"Project Clearpath" is an autonomous robot designed for disaster site cleanup, capable of identifying, and localizing hazardous debris. It autonomously navigates sites, detecting debris types, and estimating 3D locations.
+This repository contains deliverables for final project of Bhavana B Rao, Sriramprasad Kothapalli and Tathya Bhatt as a part of the course ENPM700: Software Development for Robotics at the University of Maryland.
 
 ## AIP
 
@@ -22,18 +22,53 @@ This project was developed using the Agile Development Process (AIP) along with 
 
 ## UML
 
-The initial UML Diagram designed during proposal phase is listed under UML/initial. The current UML diagram for the Phase-1 implementation is under UML/revised.
+The initial UML Diagram designed during proposal phase is listed under UML/initial. The UML diagram for the Phase-1 and Phase-2 implementation is under UML/revised.
 
-## Debris Detection System
+## Directory Structure and Contents
 
-This repository contains the `DebrisDetector` node implementation, which uses ROS2 and OpenCV to detect and navigate towards debris in a robot's field of view. The system integrates image processing, odometry handling, and navigation for autonomous operation.
+```bash
+project_clearpath/ 
+├── app 
+|   └── main.cpp # Entry point for the robotic system 
+├── launch 
+|   └── collector_robot.launch.py # Launch file to initialize the robot system 
+├── libs 
+|   └── debris 
+|     ├── debris_detection.cpp # Implementation of debris detection functionality 
+|     ├── debris_detection.hpp # Header file for debris detection 
+|     ├── debris_removal.cpp # Implementation of debris removal functionality 
+|     └── debris_removal.hpp # Header file for debris removal 
+├── test/ │ 
+|  ├── test_level1.cpp # Unit tests for individual components (Level 1) 
+|  └── test_level2.cpp # Integration tests for full system functionality (Level 2)
+```
 
-## Features
+### Debris Detection System
+
+The debris_detection.cpp contains the `DebrisDetector` node implementation, which uses ROS2 and OpenCV to detect and navigate towards debris in a robot's field of view. The system integrates image processing, odometry handling, and navigation for autonomous operation.
+
+#### Features
 - Detect debris using color-based thresholds in the HSV color space.
 - Navigate towards detected debris while avoiding obstacles.
 - Publish debug images for visualization.
 - Modular design with ROS2 publishers, subscribers, and services.
 
+### Debris Removal System
+
+This debris_removal.cpp contains the `DebrisRemover` node implementation, which uses ROS2 services to simulate the removal of detected debris. The system integrates with Gazebo simulation to "clean up" debris, representing the autonomous removal of obstacles from the environment.
+
+#### Features
+- Interface with Gazebo's /delete_entity service to remove debris from the simulation.
+- Modular design to seamlessly integrate with the DebrisDetector node for end-to-end autonomous operation.
+- Simulates real-world cleanup by removing specified objects from the robot's workspace.
+
+### Level 1 Test
+
+Focuses on unit testing individual components like debris detection and removal, ensuring isolated functionality using the Google Test framework.
+
+### Level 2 Test
+
+Performs integration tests to validate interactions between components, simulating the full robotic system using Google Test.
 
 ## Dependencies
 Ensure the following dependencies are installed before building the package:
@@ -90,7 +125,7 @@ If all tests pass, proceed to generate the coverage report.
 
 2. Filter out irrelevant files:
    ```bash
-   lcov --remove coverage.info '/opt/*' '/usr/*' '*/test/*' --output-file coverage_filtered.info
+   lcov --extract coverage.info '*/libs/debris/*' '*/test/*' --output-file filtered_coverage.info
    ```
 
 3. Generate an HTML report:
@@ -110,9 +145,15 @@ To launch the node, run the following command:
 ros2 launch project_clearpath collector_robot.launch.py
 ```
 
-A demo video is as follows: 
+A demo video for Phase 1 that tests only the debris detection system is as follows: 
 
 [Watch the demo video](https://drive.google.com/file/d/1Fyi_XzjUzuUIOucaIdy7Z6o0Lr2dtfaS/view?usp=sharing)
+
+The complete working video simulating a turtlebot in a disaster environment identifying and cleaning the obstacles is as given: 
+
+[Video] (https://umd.box.com/s/bzaexvmz96letgl0csp6mganamysl0pr)
+
+![Simulation Environment] (images/Gazebo.png)
 
 ## License
 
