@@ -153,7 +153,7 @@ The complete working video simulating a turtlebot in a disaster environment iden
 
 [Video] (https://umd.box.com/s/bzaexvmz96letgl0csp6mganamysl0pr)
 
-![Simulation Environment] (images/Gazebo.png)
+![images/Gazebo.png](https://github.com/sriramprasadkothapalli/project_clearpath/blob/05a682f53db57a8fb8b37622f1cc39f5ca5070a5/images/Gazebo.png)
 
 ## License
 
