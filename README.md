@@ -151,7 +151,7 @@ A demo video for Phase 1 that tests only the debris detection system is as follo
 
 The complete working video simulating a turtlebot in a disaster environment identifying and cleaning the obstacles is as given: 
 
-[Video] (https://umd.box.com/s/bzaexvmz96letgl0csp6mganamysl0pr)
+[Video] (https://drive.google.com/file/d/1M86bNoEoskpZvk5EYo5OQ4feu9Ny6GTG/view?usp=sharing)
 
 ![images/Gazebo.png](https://github.com/sriramprasadkothapalli/project_clearpath/blob/05a682f53db57a8fb8b37622f1cc39f5ca5070a5/images/Gazebo.png)
 
