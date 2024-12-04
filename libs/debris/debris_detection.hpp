@@ -1,19 +1,25 @@
+/**
+ * @file debris_detection.hpp
+ * @brief Header file for debris detection 
+ */
+
 #pragma once
 
 #include <chrono>
 #include <fstream>
 #include <functional>
-#include <memory>
-#include <string>
 #include <iomanip>
-#include "geometry_msgs/msg/twist.hpp"
-#include "nav_msgs/msg/odometry.hpp"
-#include <rclcpp/rclcpp.hpp>
+#include <memory>
 #include <opencv2/opencv.hpp>
-#include "image_transport/image_transport.hpp"
-#include "cv_bridge/cv_bridge.h"
-#include <std_msgs/msg/bool.hpp>
+#include <rclcpp/rclcpp.hpp>
 #include <sensor_msgs/msg/image.hpp>
+#include <std_msgs/msg/bool.hpp>
+#include <string>
+
+#include "cv_bridge/cv_bridge.h"
+#include "geometry_msgs/msg/twist.hpp"
+#include "image_transport/image_transport.hpp"
+#include "nav_msgs/msg/odometry.hpp"
 
 using namespace std::chrono_literals;
 using TwistMsg = geometry_msgs::msg::Twist;
@@ -79,7 +85,25 @@ class DebrisDetector : public rclcpp::Node {
   bool move2next_debris();
 
   // Getter functions to access private members for testing
-  const cv::Mat& get_current_image() { return current_image_; }
+  cv::Mat& get_current_image() { return current_image_; }
   bool is_debris_detected() { return debris_detected_; }
   double get_current_orientation() { return current_orientation_; }
+  bool get_rotate_left() { return rotate_left_; }
+  bool get_rotate_right() { return rotate_right_; }
+  bool get_stop() const { return stop_; }
+  bool get_move_forward() const { return move_forward_; }
+
+  // Setter functions to set private members
+  void set_rotate_right(bool value) { rotate_right_ = value; }
+  void set_rotate_left(bool value) { rotate_left_ = value; }
+  void set_move_forward(bool value) { move_forward_ = value; }
+  void set_stop(bool value) { stop_ = value; }
+  void set_debris_detected(bool value) { debris_detected_ = value; }
+  void set_current_orientation(double value) { current_orientation_ = value; }
+
+
+  // Setter for velocity_publisher_
+  void set_velocity_publisher(const rclcpp::Publisher<TwistMsg>::SharedPtr& publisher) {
+    velocity_publisher_ = publisher;
+  }
 };
