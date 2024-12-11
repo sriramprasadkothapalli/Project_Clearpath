@@ -155,6 +155,32 @@ The complete working video simulating a turtlebot in a disaster environment iden
 
 ![images/Gazebo.png](https://github.com/sriramprasadkothapalli/project_clearpath/blob/05a682f53db57a8fb8b37622f1cc39f5ca5070a5/images/Gazebo.png)
 
+## Problems Faced
+
+### Gazebo Simulation Issues:
+The simulation environment often froze or failed to load specific debris models, which required frequent adjustments to the URDF and configuration files.
+
+### Testing Delays:
+Implementing Google Test frameworks for integration testing took longer than expected due to insufficient mock services for ROS2 components.
+
+### Coverage Report Errors:
+Incorrect directory paths in the lcov commands caused missing files or unrequired files in the coverage report. These were fixed by updating the CMake build paths.
+
+
+## Future Work
+
+### Enhanced Detection Algorithms:
+Explore implementing machine learning models for better debris detection and classification in cluttered environments.
+
+### Improved Navigation:
+Upgrade the navigation stack to include SLAM for dynamic environments with moving obstacles.
+
+### Dynamic Task Assignment:
+Integrate multi-robot coordination for task distribution and debris removal in larger disaster zones.
+
+### Modular Expansion:
+Add new functionalities, such as victim detection or hazardous material handling, to address more disaster scenarios.
+
 ## License
 
 This project is licensed under the MIT License. See the `LICENSE` file for more details.
