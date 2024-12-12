@@ -160,12 +160,21 @@ The complete working video simulating a turtlebot in a disaster environment iden
 ### Gazebo Simulation Issues:
 The simulation environment often froze or failed to load specific debris models, which required frequent adjustments to the URDF and configuration files.
 
-### Testing Delays:
-Implementing Google Test frameworks for integration testing took longer than expected due to insufficient mock services for ROS2 components.
+### OpenCV Issues in CI:
+In our Continuous Integration (CI) pipeline, we faced challenges with tests that relied on OpenCV functionalities. Specifically, tests would fail because they attempted to invoke GUI features that are not available in a headless server environment. This presented a significant barrier to automated testing and validation of our image processing capabilities.
 
-### Coverage Report Errors:
-Incorrect directory paths in the lcov commands caused missing files or unrequired files in the coverage report. These were fixed by updating the CMake build paths.
+Solution: Set OpenCV Environment to Headless
+To resolve this issue, we configured OpenCV to run in headless mode within our CI environment. By doing so, we eliminated the dependency on graphical components, allowing tests to execute successfully without requiring a display. This adjustment not only stabilized our CI processes but also improved overall test execution efficiency.
 
+### Coverage Report Errors
+While generating coverage reports using lcov, we encountered problems where irrelevant files were included in the output. This cluttered the coverage results and made it difficult to assess the actual code coverage of our project accurately.
+
+Solution: Filtering Coverage Data
+To rectify this, we implemented a filtering step using lcov commands. Specifically, we utilized the following command:
+```bash
+lcov --extract coverage.info '*/libs/debris/*' '*/test/*' --output-file filtered_coverage.info
+```
+This command allowed us to extract only the relevant files related to our debris detection and removal functionalities, as well as the associated tests. As a result, the filtered coverage report provided a clearer and more accurate representation of our code coverage metrics. 
 
 ## Future Work
 
